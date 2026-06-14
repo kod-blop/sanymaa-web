@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanymaa - Official Links</title>
+    <!-- FontAwesome İkon Kütüphanesi -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Poppins Yazı Tipi) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Genel Sayfa Ayarları (Koyu Tema ve Montagem Funk Atmosferi) */
+        body {
+          margin: 0;
+          padding: 0;
+          background: radial-gradient(circle, #121214 0%, #050506 100%);
+          font-family: 'Poppins', sans-serif;
+          color: #ffffff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          overflow: hidden;
+        }
+
+        /* Ana Kart Yapısı */
+        .profile-container {
+          text-align: center;
+          background: rgba(255, 255, 255, 0.03);
+          padding: 40px 30px;
+          border-radius: 20px;
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          width: 330px;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+          margin: 15px 0 5px 0;
+          font-size: 24px;
+          letter-spacing: 1px;
+          font-weight: 700;
+        }
+
+        .bio {
+          color: #888;
+          font-size: 14px;
+          margin-bottom: 30px;
+        }
+
+        /* --- ANIMASYONLAR --- */
+
+        /* 1. Profil Fotoğrafı Girişi (Deep Zoom Efekti) */
+        @keyframes deepZoom {
+          0% {
+            transform: scale(0.2);
+            opacity: 0;
+          }
+          100% {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+
+        .profile-img {
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          border: 3px solid #00f0ff; /* Neon Mavi Çerçeve */
+          box-shadow: 0 0 20px #00f0ff;
+          animation: deepZoom 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          object-fit: cover;
+        }
+
+        /* 2. Butonların Sarsıntı Hali (Hard Shake Efekti) */
+        @keyframes hardShake {
+          0% { transform: translate(0, 0) rotate(0deg); }
+          20% { transform: translate(-3px, 2px) rotate(-1deg); }
+          40% { transform: translate(3px, -1px) rotate(1deg); }
+          60% { transform: translate(-2px, -2px) rotate(0deg); }
+          80% { transform: translate(2px, 1px) rotate(1deg); }
+          100% { transform: translate(0, 0) rotate(0deg); }
+        }
+
+        /* Buton Ortak Tasarımı */
+        .link-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          padding: 16px;
+          margin: 16px 0;
+          border-radius: 12px;
+          text-decoration: none;
+          font-weight: 600;
+          color: #fff;
+          transition: all 0.2s ease;
+          font-size: 16px;
+        }
+
+        /* Butonların Üzerine Gelince (Hover) Hard Shake Tetiklenecek */
+        .link-btn:hover {
+          animation: hardShake 0.3s infinite;
+        }
+
+        /* Buton Özel Renkleri ve Parlamaları */
+        .tiktok {
+          background: #000000;
+          border: 1px solid #ff0050;
+          box-shadow: 0 0 5px rgba(255, 0, 80, 0.3);
+        }
+        .tiktok:hover {
+          box-shadow: 0 0 20px #ff0050;
+        }
+
+        .instagram {
+          background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+          box-shadow: 0 0 5px rgba(220, 39, 67, 0.3);
+        }
+        .instagram:hover {
+          box-shadow: 0 0 20px #dc2743;
+        }
+
+        .youtube {
+          background: #ff0000;
+          box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+        }
+        .youtube:hover {
+          box-shadow: 0 0 20px #ff0000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <!-- Profil Fotoğrafı (Deep Zoom Girişli) -->
+        <div class="avatar-area">
+            <!-- Geçici olarak rastgele bir resim koydum, buraya Sanymaa'nın profil fotosunu ekleyebilirsin -->
+            <img src="https://picsum.photos/150" class="profile-img" alt="Sanymaa">
+        </div>
+        
+        <h1>Sanymaa</h1>
+        <p class="bio">Official Social Media Accounts</p>
+
+        <!-- Sosyal Medya Butonları (Hard Shake Efektli) -->
+        <div class="links-container">
+            <!-- href="link" kısımlarına Sanymaa'nın gerçek hesap linklerini yapıştırabilirsin -->
+            <a href="https://www.tiktok.com" target="_blank" class="link-btn tiktok">
+                <i class="fa-brands fa-tiktok"></i> TikTok
+            </a>
+            
+            <a href="https://www.instagram.com" target="_blank" class="link-btn instagram">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            
+            <a href="https://www.youtube.com" target="_blank" class="link-btn youtube">
+                <i class="fa-brands fa-youtube"></i> YouTube
+            </a>
+        </div>
+    </div>
+
+</body>
+  </html>
+                  
